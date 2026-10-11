@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anas Haidery – Software Engineer | AI/ML | Data Analyst</title>
+<meta name="description" content="Portfolio of Anas Haidery: data analysis, AI/ML and full-stack projects, skills and experience.">
+<!-- Link preview (LinkedIn, WhatsApp, X). Put a 1200x630 image at images/preview.png and use your real site URL -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anas Haidery – Software Engineer | AI/ML | Data Analyst">
+<meta property="og:description" content="Data analysis, AI/ML and full-stack projects. Open to internships and full-time roles.">
+<meta property="og:image" content="https://yourusername.github.io/images/preview.png">
+<meta property="og:url" content="https://yourusername.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A7%3C/text%3E%3C/svg%3E">
+<!-- Analytics (pick one, free): Cloudflare Web Analytics
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b1a; --text:#f1f4ff; --muted:#aab3d1;
+  --glass:rgba(255,255,255,.075); --edge:rgba(255,255,255,.2);
+  --a:#6f7bff; --b:#ff7ad9; --c:#4de1d0;
+  --font:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;font-size:17px;
+  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);overflow-x:hidden}
+/* Background orbs: what the glass refracts */
+.orbs{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.orbs i{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75;animation:drift 22s ease-in-out infinite alternate}
+.orbs i:nth-child(1){width:46vmax;height:46vmax;background:var(--a);top:-12%;left:-10%}
+.orbs i:nth-child(2){width:38vmax;height:38vmax;background:var(--b);top:30%;right:-14%;animation-delay:-7s}
+.orbs i:nth-child(3){width:34vmax;height:34vmax;background:var(--c);bottom:-14%;left:25%;animation-delay:-13s}
+@keyframes drift{to{transform:translate(8vmax,-6vmax) scale(1.15)}}
+
+/* Liquid glass surface */
+.glass{position:relative;background:linear-gradient(135deg,rgba(255,255,255,.14),var(--glass) 40%,rgba(255,255,255,.04));
+  border:1px solid var(--edge);border-radius:28px;
+  -webkit-backdrop-filter:blur(22px) saturate(190%);backdrop-filter:blur(22px) saturate(190%);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.45),inset 0 -1px 1px rgba(255,255,255,.08),0 20px 50px rgba(0,0,0,.35);
+  overflow:hidden}
+/* Specular highlight that follows the pointer */
+.glass::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(260px circle at var(--mx,30%) var(--my,0%),rgba(255,255,255,.22),transparent 60%);
+  opacity:var(--o,.5);transition:opacity .3s}
+.glass:hover{--o:1}
+
+nav{position:fixed;top:calc(14px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:10;
+  display:flex;gap:2px;padding:6px;border-radius:999px;max-width:94vw;overflow-x:auto;scrollbar-width:none}
+nav a{color:var(--muted);text-decoration:none;font-size:.9rem;padding:8px 14px;border-radius:999px;white-space:nowrap;transition:.2s}
+nav a:hover,nav a.on{color:var(--text);background:rgba(255,255,255,.14)}
+
+main{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:70px 0 20px}
+h1{font-size:clamp(2.6rem,8vw,5.4rem);line-height:1.02;font-weight:700;letter-spacing:-.03em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.02em;margin-bottom:22px;font-weight:650}
+h3{font-size:1.2rem;font-weight:600}
+p{color:var(--muted)}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-top:100px}
+.hero .glass{padding:clamp(28px,6vw,64px);width:100%}
+.hero p{font-size:1.15rem;max-width:52ch;margin:18px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;text-decoration:none;color:var(--text);font-weight:600;
+  border:1px solid var(--edge);background:rgba(255,255,255,.1);transition:.2s;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.4)}
+.btn:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.btn.main{background:linear-gradient(135deg,var(--a),var(--b));border-color:transparent}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+.card{padding:26px;display:flex;flex-direction:column;gap:10px}
+.shot{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;display:grid;place-items:center;
+  color:var(--muted);font-size:.85rem;border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(135deg,rgba(111,123,255,.35),rgba(255,122,217,.28))}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .body{display:flex;flex-direction:column;gap:10px;flex:1}
+.meta{font-size:.95rem}.meta b{color:var(--text);font-weight:600}
+.badge{font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:999px;margin-left:8px;vertical-align:middle;
+  background:linear-gradient(135deg,var(--a),var(--b));color:#fff}
+.featured{grid-column:1/-1}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.pill{font-size:.9rem;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:var(--text)}
+.pill.live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:8px;box-shadow:0 0 8px #4ade80}
+.now{margin-top:12px}
+@media (min-width:760px){.featured{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}.featured .tags{margin-top:12px}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.tag{font-size:.8rem;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:var(--text)}
+.links{display:flex;gap:16px;font-size:.95rem}
+.links a{color:var(--c);text-decoration:none;font-weight:600}
+.links a:hover{text-decoration:underline}
+.about{padding:32px;display:grid;gap:24px;grid-template-columns:1fr}
+.stats{display:flex;gap:28px;flex-wrap:wrap}
+.stats b{display:block;font-size:2rem;color:var(--text);line-height:1.1}
+.skills{padding:26px}
+.skills h3{margin-bottom:12px}
+.tl{display:grid;gap:16px;border-left:2px solid rgba(255,255,255,.18);margin-left:8px;padding-left:22px}
+.tl .glass{padding:22px}
+.tl small{color:var(--c);font-weight:600}
+form{display:grid;gap:12px;padding:28px}
+input,textarea{font:inherit;color:var(--text);background:rgba(255,255,255,.08);border:1px solid var(--edge);border-radius:16px;padding:12px 16px;width:100%}
+input::placeholder,textarea::placeholder{color:var(--muted)}
+:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+footer{text-align:center;padding:50px 20px 40px;color:var(--muted);font-size:.9rem}
+@media (min-width:760px){.about{grid-template-columns:1.4fr 1fr;align-items:center}}
+/* ---- Responsive: phone, tablet, laptop, large desktop ---- */
+img{max-width:100%}
+.grid>*,.about>*,.featured>*{min-width:0}
+p,h1,h2,h3,a{overflow-wrap:anywhere}
+input,textarea{font-size:16px}
+@media (min-width:1500px){main{max-width:1180px}body{font-size:18px}}
+@media (min-width:2200px){main{max-width:1400px}body{font-size:20px}}
+@media (max-width:900px){.featured{display:flex!important;flex-direction:column}}
+@media (max-width:640px){
+  body{font-size:16px}
+  main{padding:0 14px}
+  section{padding:56px 0 12px}
+  nav{padding:4px;top:calc(8px + env(safe-area-inset-top))}
+  nav a{padding:8px 11px;font-size:.82rem}
+  .glass{border-radius:22px;-webkit-backdrop-filter:blur(14px) saturate(170%);backdrop-filter:blur(14px) saturate(170%)}
+  .hero{padding-top:84px}
+  .hero p{font-size:1rem}
+  .btns .btn{flex:1 1 100%;text-align:center}
+  .card,.skills,form,.about{padding:20px}
+  .tl{padding-left:14px;margin-left:4px}
+  .stats{gap:18px}
+}
+@media (hover:none){.glass{--o:.6}.btn:hover{transform:none}}
+@media (max-height:500px) and (orientation:landscape){.hero{min-height:auto;padding-bottom:40px}}
+@media (prefers-reduced-motion:reduce){.orbs i{animation:none}html{scroll-behavior:auto}}
+/* Browsers without backdrop-filter */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:rgba(30,36,70,.85)}}
+</style>
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<nav class="glass" aria-label="Main">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a>
+  <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="glass">
+    <h1>Hi, I'm Anas Haidery.<br>I turn data into decisions and ideas into apps.</h1>
+    <p>Computer Engineering graduate and Data Analyst with hands-on experience in Python, SQL, Power BI, machine learning and full-stack development. Looking for a Software Engineer, Data Analyst or Full-Stack Developer role or internship.</p>
+    <div class="pills">
+      <span class="pill">Mumbra, Thane, Maharashtra</span>
+      <span class="pill live">Open to internships and full-time roles</span>
+    </div>
+    <div class="btns">
+      <a class="btn main" href="Anas_Haidery_Resume.pdf" download>Download résumé</a>
+      <a class="btn" href="#projects">See my projects</a>
+      <a class="btn" href="#contact">Contact me</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <div class="glass about">
+    <div>
+      <p>I'm a Computer Engineering graduate (B.E., Mumbai University, 2026) who enjoys cleaning messy data, finding the story in it and showing it clearly. I use Python, SQL, Power BI and Excel for analysis, and I've shipped end-to-end projects from an AI-based recruitment platform to deep-learning media tools.</p>
+      <p class="now"><b style="color:var(--text)">Currently:</b> exploring AI, data analytics and blockchain through campus tech communities, hackathons and open-source work.</p>
+      <p class="now"><b style="color:var(--text)">Languages:</b> English, Hindi, Urdu.</p>
+    </div>
+    <div class="stats">
+      <div><b>814</b><p>Mutual funds analysed</p></div>
+      <div><b>6</b><p>NSE stocks tracked</p></div>
+      <div><b>889</b><p>Trading days per stock</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="glass card featured">
+      <div class="shot">Add screenshot: images/mutual-fund.png<img src="images/mutual-fund.png" alt="Power BI dashboard for mutual fund analysis" loading="lazy" onerror="this.remove()"></div>
+      <div class="body">
+        <h3>Mutual Fund Overview and Insights<span class="badge">Featured</span></h3>
+        <p class="meta">Data Analyst Internship Project, Labmentix</p>
+        <p class="meta"><b>Problem:</b> Investors face hundreds of Indian mutual fund schemes and no simple way to compare them.</p>
+        <p class="meta"><b>My role:</b> Cleaned the dataset (data types, missing values, duplicates), built a weighted fund scoring model and designed the dashboard.</p>
+        <p class="meta"><b>Result:</b> Ranked 793 of 814 funds, extracted the Top 30, and delivered a 2-page, 12-visualization Power BI dashboard with an executive summary.</p>
+        <p class="meta"><b>Challenge:</b> 3-year return, expense ratio, fund age and 1-year return sit on different scales, so I normalised them with MinMaxScaler before weighting.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">Power BI</span></div>
+        <div class="links"><a href="https://github.com/haideryanas-hash/mutual-fund-analysis-project" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+    </article>
+    <article class="glass card featured">
+      <div class="shot">Add screenshot: images/stock-analysis.png<img src="images/stock-analysis.png" alt="Stock market analysis app" loading="lazy" onerror="this.remove()"></div>
+      <div class="body">
+        <h3>Stock Market Analysis in SQL</h3>
+        <p class="meta">Data Analyst Internship Project, Labmentix</p>
+        <p class="meta"><b>Problem:</b> Spot buy and sell moments in six NSE stocks using moving-average signals.</p>
+        <p class="meta"><b>My role:</b> Validated 889 trading days per stock (2015 to 2018) in MySQL, built 20-day and 50-day averages and crossover signals with window functions and CTEs, and made a Streamlit live-SQL app.</p>
+        <p class="meta"><b>Result:</b> 56 Buy and 57 Sell signals across six stocks, plus an insights report.</p>
+        <p class="meta"><b>Challenge:</b> About 50% one-day drops in TCS and Infosys came from unadjusted 1:1 bonus issues. Correcting them changed TCS returns from -23.8% to +52.4% and Infosys from -30.9% to +38.2%.</p>
+        <div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Streamlit</span></div>
+        <div class="links"><a href="https://github.com/haideryanas-hash/sql-stock-market-analysis-project" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="glass skills"><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div></div>
+    <div class="glass skills"><h3>Data analysis and BI</h3><div class="tags"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">SQL (Window Functions, CTEs)</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Scikit-learn</span></div></div>
+    <div class="glass skills"><h3>AI and ML</h3><div class="tags"><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">NLP</span><span class="tag">Computer Vision</span></div></div>
+    <div class="glass skills"><h3>Databases</h3><div class="tags"><span class="tag">MySQL</span><span class="tag">MongoDB</span></div></div>
+    <div class="glass skills"><h3>Tools and platforms</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Cloudinary</span><span class="tag">Streamlit</span></div></div>
+    <div class="glass skills"><h3>Core strengths</h3><div class="tags"><span class="tag">Problem-solving</span><span class="tag">Teamwork</span><span class="tag">Leadership</span><span class="tag">Communication</span></div></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience and education</h2>
+  <div class="tl">
+    <div class="glass"><small>Internship</small><h3>Data Analyst Intern, Labmentix</h3><p>Completed two data projects: mutual fund scoring and ranking with Power BI, and moving-average signals for NSE stocks in SQL.</p></div>
+    <div class="glass"><small>Activities</small><h3>Hackathons, workshops and communities</h3><p>Took part in coding hackathons and AI/ML workshops at NHITM, contributed code and documentation to open-source and academic projects on GitHub, and stayed active in campus tech communities.</p></div>
+    <div class="glass"><small>2022 – 2026</small><h3>B.E. Computer Engineering, New Horizon Institute of Technology and Management</h3><p>Mumbai University. Completed.</p></div>
+    <div class="glass"><small>2020 – 2022</small><h3>H.S.C. Science, Rosary Convent Jr. College</h3><p>Maharashtra Board.</p></div>
+    <div class="glass"><small>2020</small><h3>S.S.C., Abdullah Patel High School</h3><p>Maharashtra Board.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form class="glass" action="https://formspree.io/f/mbgdyqwl" method="POST">
+    <p>Email <a style="color:var(--c)" href="mailto:haideryanas@gmail.com">haideryanas@gmail.com</a>, call <a style="color:var(--c)" href="tel:+919167553860">+91 91675 53860</a>, find me on <a style="color:var(--c)" href="https://linkedin.com/in/anas-haidery-76b43a376" target="_blank" rel="noopener">LinkedIn</a> and <a style="color:var(--c)" href="https://github.com/haideryanas-hash" target="_blank" rel="noopener">GitHub</a>, or send a message here.</p>
+    <input name="name" placeholder="Your name" required aria-label="Your name">
+    <input name="email" type="email" placeholder="Your email" required aria-label="Your email">
+    <textarea name="message" rows="4" placeholder="Message" required aria-label="Message"></textarea>
+    <button class="btn main" type="submit">Send message</button>
+  </form>
+</section>
+</main>
+
+<footer>© <span id="y"></span> Anas Haidery</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+// Specular highlight follows the pointer on every glass surface
+document.querySelectorAll('.glass').forEach(el=>{
+  el.addEventListener('pointermove',e=>{
+    const r=el.getBoundingClientRect();
+    el.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    el.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
+// Highlight the current section in the nav
+const links=[...document.querySelectorAll('nav a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
