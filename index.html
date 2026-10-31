@@ -92,6 +92,14 @@ p{color:var(--muted)}
 .links a{color:var(--c);text-decoration:none;font-weight:600}
 .links a:hover{text-decoration:underline}
 .about{padding:32px;display:grid;gap:24px;grid-template-columns:1fr}
+.who{display:flex;gap:26px;align-items:center}
+.avatar{position:relative;flex:0 0 auto;width:clamp(120px,18vw,170px);aspect-ratio:1;border-radius:50%;overflow:hidden;display:grid;place-items:center;
+  font-size:2.6rem;font-weight:700;letter-spacing:.02em;color:#fff;
+  background:linear-gradient(135deg,var(--a),var(--b));
+  border:1px solid rgba(255,255,255,.45);
+  box-shadow:inset 0 2px 3px rgba(255,255,255,.6),0 0 0 6px rgba(255,255,255,.1),0 14px 34px rgba(0,0,0,.4)}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:640px){.who{flex-direction:column;text-align:center}}
 .stats{display:flex;gap:28px;flex-wrap:wrap}
 .stats b{display:block;font-size:2rem;color:var(--text);line-height:1.1}
 .skills{padding:26px}
@@ -204,6 +212,32 @@ input,textarea{font-size:16px}
         <div class="links"><a href="https://github.com/haideryanas-hash/sql-stock-market-analysis-project" target="_blank" rel="noopener">GitHub</a></div>
       </div>
     </article>
+    <article class="glass card featured">
+      <div class="shot">Add screenshot: images/real-estate.png<img src="images/real-estate.png" alt="Real estate investment advisor Streamlit app" loading="lazy" onerror="this.remove()"></div>
+      <div class="body">
+        <h3>Real Estate Investment Advisor</h3>
+        <p class="meta">Data Analyst Internship Project, Labmentix</p>
+        <p class="meta"><b>Problem:</b> Buyers have thousands of property listings and no easy way to tell which are good investments or what prices may look like in five years.</p>
+        <p class="meta"><b>My role:</b> Cleaned 35,359 Indian property listings in Pandas (repaired 16,647 rows, fixed price per sq ft in 331 rows, standardised 325 amenity spellings), built investment and 5-year price targets, compared 6 models in MLflow and shipped the app.</p>
+        <p class="meta"><b>Result:</b> XGBoost reproduced the investment labels with 99.2% accuracy (ROC-AUC 0.9996) and cut 5-year price RMSE by 93% against a fixed 8% baseline. Delivered a 6-page Streamlit advisor with confidence scores, feature importance and filters.</p>
+        <p class="meta"><b>Challenge:</b> Significance tests across 20 EDA questions showed the data behaves as simulated (price unrelated to size, city or amenities), which shaped how I read the model results.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">XGBoost</span><span class="tag">MLflow</span><span class="tag">Streamlit</span></div>
+        <div class="links"><a href="https://github.com/haideryanas-hash/real-estate-investment-advisor-project" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+    </article>
+    <article class="glass card featured">
+      <div class="shot">Add screenshot: images/sugar-cosmetics.png<img src="images/sugar-cosmetics.png" alt="Sugar Cosmetics Instagram engagement dashboard" loading="lazy" onerror="this.remove()"></div>
+      <div class="body">
+        <h3>Instagram Performance Analytics: Sugar Cosmetics</h3>
+        <p class="meta">Data Analyst Internship Project, Labmentix</p>
+        <p class="meta"><b>Problem:</b> Find out what drives engagement across 50,000 Instagram posts from Sugar Cosmetics (Apr 2024 to Apr 2025).</p>
+        <p class="meta"><b>My role:</b> Cleaned and validated the data (missing values, duplicates, zero values, Reach and Impressions logic), engineered engagement-rate, month, weekday and hashtag fields, and built 8 analysis sheets.</p>
+        <p class="meta"><b>Result:</b> An interactive Tableau Public dashboard (KPIs, posting trend, top posts, post type, weekday, engagement funnel, hashtags), a Streamlit version, an insights report and a stakeholder presentation.</p>
+        <p class="meta"><b>Challenge:</b> Engagement rate (18.54%) was nearly the same across formats, weekdays, hashtags and campaigns (within about 0.2 points), with likes at about 81% of interactions. I recommended A/B tests and share and save prompts.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Tableau</span><span class="tag">Streamlit</span></div>
+        <div class="links"><a href="https://github.com/haideryanas-hash/sugar-cosmetics-instagram-analysis-project" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -222,7 +256,7 @@ input,textarea{font-size:16px}
 <section id="experience">
   <h2>Experience and education</h2>
   <div class="tl">
-    <div class="glass"><small>Internship</small><h3>Data Analyst Intern, Labmentix</h3><p>Completed two data projects: mutual fund scoring and ranking with Power BI, and moving-average signals for NSE stocks in SQL.</p></div>
+    <div class="glass"><small>Internship</small><h3>Data Analyst Intern, Labmentix</h3><p>Delivered four end-to-end data projects: mutual fund scoring with Power BI, moving-average stock signals in SQL, a real estate investment advisor with XGBoost, and an Instagram engagement dashboard in Tableau.</p></div>
     <div class="glass"><small>Activities</small><h3>Hackathons, workshops and communities</h3><p>Took part in coding hackathons and AI/ML workshops at NHITM, contributed code and documentation to open-source and academic projects on GitHub, and stayed active in campus tech communities.</p></div>
     <div class="glass"><small>2022 – 2026</small><h3>B.E. Computer Engineering, New Horizon Institute of Technology and Management</h3><p>Mumbai University. Completed.</p></div>
     <div class="glass"><small>2020 – 2022</small><h3>H.S.C. Science, Rosary Convent Jr. College</h3><p>Maharashtra Board.</p></div>
