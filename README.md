@@ -14,8 +14,10 @@ Computer Engineering graduate (B.E., Mumbai University, 2026) skilled in Python,
 - **Projects:**
   - Mutual Fund Overview and Insights (Python, Scikit-learn, Power BI)
   - Stock Market Analysis in SQL (MySQL, SQL, Python, Streamlit)
+  - Real Estate Investment Advisor (Python, XGBoost, MLflow, Streamlit)
+  - Instagram Performance Analytics: Sugar Cosmetics (Python, Pandas, Tableau, Streamlit)
 - **Skills:** programming, data analysis and BI, AI/ML, databases, tools
-- **Experience and education:** Data Analyst internship project work, activities and academics
+- **Experience and education:** Data Analyst internship at Labmentix (four end-to-end projects), activities and academics
 - **Contact:** email, LinkedIn, GitHub and a contact form
 - **Downloadable résumé**
 
@@ -35,6 +37,8 @@ Anas_Haidery_Resume.pdf     résumé
 images/
   mutual-fund.png           project screenshot
   stock-analysis.png        project screenshot
+  real-estate.png           project screenshot
+  sugar-cosmetics.png       project screenshot
   preview.png               link preview image (WhatsApp, LinkedIn)
 README.md
 ```
